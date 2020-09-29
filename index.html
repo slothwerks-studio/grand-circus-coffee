@@ -12,20 +12,20 @@
 
   <body>
     <!-- add h1 start & end tag around line below -->
-    Grand Circus Coffee
+    <h1>Grand Circus Coffee</h1>
 
     <!-- add a paragraph tag around the line below      -->
-    Please choose a drink:
+    <p>Please choose a drink:</p>
 
     <div id="drinks">
       <!-- add the image filenames to the src attributes below -->
       <img src="cappuccino.jpg" height="240" width="247" onclick="checkout('cappuccino')">
-      <img src="" height="240" width="247" onclick="checkout('latte')">
-      <img src="iced coffee" height="240" width="247" onclick="checkout('iced-coffee')">
+      <img src="latte.jpg" height="240" width="247" onclick="checkout('latte')">
+      <img src="iced-coffee.jpg" height="240" width="247" onclick="checkout('iced-coffee')">
     </div>
 
     <!-- add a class of "hidden" to the div tag below     -->
-    <div id="checkout">
+    <div id="checkout" class="hidden">
       <img id="checkout-img" height="360" width="370" align="right">
       <h2 id="selected-drink"></h2>
       <span id="price"></span>
@@ -41,9 +41,9 @@
     </div>
 
     <!-- add a class of "hidden" and an id of "receipt" to the div below     -->
-    <div>
+    <div id="receipt"class="hidden">
       <!-- add h2 start & end tag around line below -->
-      Receipt
+      <h2>Receipt</h2>
       <p>
         <span id="drink"></span>
         <span id="total"></span><br />
