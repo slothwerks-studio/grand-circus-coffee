@@ -1,0 +1,78 @@
+/* HTML element selectors start without punctuation--just name of tag */
+
+/* add rule for body tag */
+
+button {
+  display: block;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+  border-width: 0px;
+  width: 10em;
+  height: 24px;
+}
+
+/* you can select multiple selectors at once with commas */
+
+h1,
+h2 {
+  /* add rule for h1, h2 here */
+}
+
+img {
+  margin: 10px;
+}
+
+/* when selecting by class, you use a . followed by the class name */
+
+/* add rule for class hidden below */
+
+.italics {
+  font-style: italic;
+  margin-left: 2em;
+}
+
+/* when selecting by id, you use a # followed by the id name */
+
+#checkout {
+  /*  background-color: magenta;
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  height: 392px;
+  left: 10%;
+  top: 10%;
+  border: solid black 2px;
+  padding: 16px; */
+}
+
+#drinks {
+  /*   add margin here! */
+  padding: 0;
+  width: 810px;
+}
+
+#price {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#receipt {
+  /*  background-color: white;
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  height: 60%;
+  left: 35%;
+  top: 20%;
+  border: solid black 2px;
+  padding: 16px; */
+}
+
+#restart {
+  margin: 10px auto;
+}
+
+#total {
+  margin-left: 16em;
+}

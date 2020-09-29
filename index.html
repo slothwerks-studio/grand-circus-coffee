@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Grand Circus Coffee</title>
+  </head>
+
+  <body>
+    <!-- add h1 start & end tag around line below -->
+    Grand Circus Coffee
+
+    <!-- add a paragraph tag around the line below      -->
+    Please choose a drink:
+
+    <div id="drinks">
+      <!-- add the image filenames to the src attributes below -->
+      <img src="cappuccino.jpg" height="240" width="247" onclick="checkout('cappuccino')">
+      <img src="" height="240" width="247" onclick="checkout('latte')">
+      <img src="iced coffee" height="240" width="247" onclick="checkout('iced-coffee')">
+    </div>
+
+    <!-- add a class of "hidden" to the div tag below     -->
+    <div id="checkout">
+      <img id="checkout-img" height="360" width="370" align="right">
+      <h2 id="selected-drink"></h2>
+      <span id="price"></span>
+      <p>
+        How many would you like?
+        <label for="quantity1">
+            <input type="number" value="1" min="1" max="10" id="quantity1" />
+          </label>
+      </p>
+      <p>
+        <button onclick="receipt()">Check Out</button>
+      </p>
+    </div>
+
+    <!-- add a class of "hidden" and an id of "receipt" to the div below     -->
+    <div>
+      <!-- add h2 start & end tag around line below -->
+      Receipt
+      <p>
+        <span id="drink"></span>
+        <span id="total"></span><br />
+        <div class="italics">
+          <span id="quantity2"></span> at
+          <span id="price2"></span> each
+        </div>
+      </p>
+      <p>
+        Thank you for your purchase!
+      </p>
+      <button onclick="restart()" id="restart">Start Over</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
