@@ -1,6 +1,11 @@
 /* HTML element selectors start without punctuation--just name of tag */
 
 /* add rule for body tag */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dedede;
+  margin: 10px 40px;
+}
 
 button {
   display: block;
@@ -17,6 +22,7 @@ button {
 h1,
 h2 {
   /* add rule for h1, h2 here */
+  color: teal
 }
 
 img {
@@ -26,6 +32,9 @@ img {
 /* when selecting by class, you use a . followed by the class name */
 
 /* add rule for class hidden below */
+.hidden {
+  display: none;
+}
 
 .italics {
   font-style: italic;
@@ -35,7 +44,7 @@ img {
 /* when selecting by id, you use a # followed by the id name */
 
 #checkout {
-  /*  background-color: magenta;
+  background-color: magenta;
   position: absolute;
   z-index: 1;
   width: 80%;
@@ -43,11 +52,12 @@ img {
   left: 10%;
   top: 10%;
   border: solid black 2px;
-  padding: 16px; */
+  padding: 16px;
 }
 
 #drinks {
   /*   add margin here! */
+  margin: 4px auto;
   padding: 0;
   width: 810px;
 }
@@ -58,7 +68,7 @@ img {
 }
 
 #receipt {
-  /*  background-color: white;
+  background-color: white;
   position: absolute;
   z-index: 1;
   width: 30%;
@@ -66,7 +76,7 @@ img {
   left: 35%;
   top: 20%;
   border: solid black 2px;
-  padding: 16px; */
+  padding: 16px;
 }
 
 #restart {
