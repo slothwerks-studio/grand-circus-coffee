@@ -2,6 +2,25 @@
 let price;
 let drink;
 
+// build cart object
+let cart = {
+  latte: {
+    price: 4.29,
+    label: "Latte",
+    quantity: 0
+  },
+  cappuccino: {
+    price: 4.79,
+    label: "Cappuccino",
+    quantity: 0
+  },
+  icedCoffee: {
+    price: 3.79,
+    label: "Iced Coffee",
+    quantity: 0
+  }
+};
+
 function checkout(choice) {
   document.querySelector("#checkout").classList.remove("hidden");
   document.querySelector("#checkout-img").src = `${choice}.jpg`; //look for other concatenation
