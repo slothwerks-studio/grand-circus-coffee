@@ -62,6 +62,10 @@ img {
   width: 810px;
 }
 
+#cart {
+  margin: 10px auto;
+}
+
 #price {
   font-size: 18pt;
   font-weight: bold;
