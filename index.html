@@ -21,7 +21,12 @@
       <!-- add the image filenames to the src attributes below -->
       <img src="cappuccino.jpg" height="240" width="247" onclick="checkout('cappuccino')">
       <img src="latte.jpg" height="240" width="247" onclick="checkout('latte')">
-      <img src="iced-coffee.jpg" height="240" width="247" onclick="checkout('iced-coffee')">
+      <img src="iced-coffee.jpg" height="240" width="247" onclick="checkout('icedCoffee')">
+    </div>
+
+    <!-- add a button to access the cart -->
+    <div>
+      <button onclick="receipt()" id="cart">Checkout</button>
     </div>
 
     <!-- add a class of "hidden" to the div tag below     -->
@@ -36,7 +41,7 @@
           </label>
       </p>
       <p>
-        <button onclick="receipt()">Check Out</button>
+        <button onclick="updateCart()">Update Cart</button>
       </p>
     </div>
 
@@ -44,16 +49,16 @@
     <div id="receipt"class="hidden">
       <!-- add h2 start & end tag around line below -->
       <h2>Receipt</h2>
+      <div id="cartItems">
+        <!-- The following default value will be replced using JavaScript. -->
+        <p>There are no items in the cart.</p>
+      </div>
+      <div>
+        <h3>Grand Total</h3>
+        <p id="grandTotal" class="breakdown"></p>
+      </div>
       <p>
-        <span id="drink"></span>
-        <span id="total"></span><br />
-        <div class="italics">
-          <span id="quantity2"></span> at
-          <span id="price2"></span> each
-        </div>
-      </p>
-      <p>
-        Thank you for your purchase!
+        Thank you for visiting Grand Circus Coffee!
       </p>
       <button onclick="restart()" id="restart">Start Over</button>
     </div>
