@@ -25,6 +25,10 @@ h2 {
   color: teal
 }
 
+h3 {
+  margin-bottom: 5px;
+}
+
 img {
   margin: 10px;
 }
@@ -36,8 +40,9 @@ img {
   display: none;
 }
 
-.italics {
+.breakdown {
   font-style: italic;
+  margin-top: 0;
   margin-left: 2em;
 }
 
@@ -87,6 +92,8 @@ img {
   margin: 10px auto;
 }
 
-#total {
-  margin-left: 16em;
+#grandTotal {
+  color: teal;
+  font-weight: bold;
+  font-size: 1.2em;
 }

@@ -49,16 +49,16 @@
     <div id="receipt"class="hidden">
       <!-- add h2 start & end tag around line below -->
       <h2>Receipt</h2>
+      <div id="cartItems">
+        <!-- The following default value will be replced using JavaScript. -->
+        <p>There are no items in the cart.</p>
+      </div>
+      <div>
+        <h3>Grand Total</h3>
+        <p id="grandTotal" class="breakdown"></p>
+      </div>
       <p>
-        <span id="drink"></span>
-        <span id="total"></span><br />
-        <div class="italics">
-          <span id="quantity2"></span> at
-          <span id="price2"></span> each
-        </div>
-      </p>
-      <p>
-        Thank you for your purchase!
+        Thank you for visiting Grand Circus Coffee!
       </p>
       <button onclick="restart()" id="restart">Start Over</button>
     </div>

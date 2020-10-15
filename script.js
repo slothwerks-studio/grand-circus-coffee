@@ -41,7 +41,7 @@ function checkout(choice) {
   quantity = cart[choice].quantity;
 
   document.querySelector("#selected-drink").innerText = drink;
-  document.querySelector("#price").innerText = "$" + price;
+  document.querySelector("#price").innerText = "$" + price.toFixed(2); // toFixed(x) turns a number into a string with x decimal places 
   document.querySelector("#quantity1").value = quantity; // Need to inject the current quantity into the DOM
 }
 
@@ -53,21 +53,54 @@ function updateCart() {
 }
 
 function receipt() {
-  document.querySelector("#checkout").classList.add("hidden");
   document.querySelector("#receipt").classList.remove("hidden");
 
-  let quantity = parseInt(document.querySelector("#quantity1").value);
+  // Determine subtotals
+  let latteTotal = cart.latte.price * cart.latte.quantity;
+  let cappuccinoTotal = cart.cappuccino.price * cart.cappuccino.quantity;
+  let icedCoffeeTotal = cart.icedCoffee.price * cart.icedCoffee.quantity;
+  let grandTotal = latteTotal + cappuccinoTotal + icedCoffeeTotal;
 
-  // add total calculation below!
-  let total = quantity * price;
+  let cartItems = document.querySelector("#cartItems");
 
-  document.querySelector("#drink").innerText = drink;
-  document.querySelector("#total").innerText = "$" + total.toFixed(2);
-  document.querySelector("#quantity2").innerText = quantity;
-  document.querySelector("#price2").innerText = "$" + price;
+  if (cart.latte.quantity > 0) {
+    cartItems.innerHTML = `<div>
+      <h3>Latte</h3>
+      <p class="breakdown">
+        $${cart.latte.price.toFixed(2)} x ${cart.latte.quantity} = $${latteTotal.toFixed(2)}
+      </p>
+    </div>`;
+  }
+
+  if (cart.cappuccino.quantity > 0) {
+    cartItems.innerHTML = cartItems.innerHTML + `<div>
+      <h3>Cappuccino</h3>
+      <p class="breakdown">
+        $${cart.cappuccino.price.toFixed(2)} x ${cart.cappuccino.quantity} = $${cappuccinoTotal.toFixed(2)}
+      </p>
+    </div>`;
+  }
+
+  if (cart.icedCoffee.quantity > 0) {
+    cartItems.innerHTML = cartItems.innerHTML + `<div>
+      <h3>Iced Coffee</h3>
+      <p class="breakdown">
+        $${cart.icedCoffee.price.toFixed(2)} x ${cart.icedCoffee.quantity} = $${icedCoffeeTotal.toFixed(2)}
+      </p>
+    </div>`;
+  }
+
+  document.querySelector("#grandTotal").innerText = "$" + grandTotal.toFixed(2);
 }
 
 function restart() {
   document.querySelector("#receipt").classList.add("hidden");
-  document.querySelector("#quantity1").value = "";
+  // Reset quantities
+  cart.latte.quantity = 0;
+  cart.cappuccino.quantity = 0;
+  cart.icedCoffee.quantity = 0;
+  // Reset cart in DOM
+  document.querySelector("#cartItems").innerHTML = `<p>
+    There are no items in the cart.
+  </p>`;
 }
